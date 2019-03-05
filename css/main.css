@@ -1,0 +1,674 @@
+/*0586FF*/
+html {
+    font-family: 'Sarala', sans-serif;
+}
+
+a:link {
+    text-decoration: none;
+}
+
+/*font-family: 'Merienda', cursive;*/
+/*font-family: 'Sarala', sans-serif;*/
+
+/*Navigation styles*/
+
+#mainNavbar {
+    background-color: rgba(0, 0, 0, .5);
+    position: fixed;
+    opacity: 0;
+    top: -30px;
+    z-index: 10;
+}
+
+.navbar-toggler {
+    background-color: white;
+}
+
+.navbar-brand img {
+    width: 100%;
+}
+
+.nav-item:hover {
+    /*background-color: rgba(0,0,0,0.2);*/
+    font-size: 24px;
+    transition: font-size linear 0.3s;
+}
+
+.nav-item {
+    font-weight: bold;
+    font-size: 20px;
+    text-transform: uppercase;
+    transition: font-size 0.5s;
+}
+
+.nav-item a {
+    color: #fff !important;
+    letter-spacing: 1px;
+}
+
+.progressiveBar {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-image: linear-gradient(to left, #ff9c00, yellow);
+    height: 4px;
+    border-radius: 10px;
+}
+
+.barNavigation {
+    padding: 10px;
+    position: fixed;
+    width: 100%;
+    height: 20px;
+}
+
+.dotNav {
+    position: absolute;
+    bottom: 13px;
+    cursor: pointer;
+    z-index: 100;
+    box-shadow: 0px 0px 5px 2px rgba(0, 0, 0, 0.5);
+    border-radius: 16px;
+    width: 10px;
+    height: 10px;
+    animation: ease-in-out dotAnimation 2s infinite;
+}
+
+#aboutDot,
+#skillsDot,
+#portfolioDot,
+#contactDot {
+    position: absolute;
+    margin: auto;
+    display: none;
+    transition: all .5s ease-in;
+
+}
+
+
+/*Home styles*/
+
+#home {
+    position: relative;
+    background: url("../images/background.png") no-repeat center center fixed;
+    background-size: cover;
+    min-height: 100vh;
+    animation: backgroundAnimation 5s ease;
+    -webkit-box-shadow: inset 0px -5px 20px 0px rgba(0, 0, 0, 0.75), inset 0px 5px 20px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: inset 0px -5px 20px 0px rgba(0, 0, 0, 0.75), inset 0px 5px 20px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: inset 0px -5px 20px 0px rgba(0, 0, 0, 0.75), inset 0px 5px 20px 0px rgba(0, 0, 0, 0.75);
+}
+
+.start-content {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    margin: auto;
+}
+
+.start-content-information {
+    position: absolute;
+    margin: auto;
+    width: 100%;
+    color: white;
+    top: 40%;
+    font-family: 'Merienda', cursive
+}
+
+.start-content-information h1 {
+    display: none;
+    font-weight: 500;
+    font-size: 60px;
+    letter-spacing: 1px;
+}
+
+.social-media {
+    text-align: center;
+    position: absolute;
+    width: 100%;
+    bottom: 10%;
+}
+
+.social-tmb {
+    margin: 15px auto;
+    /*display:inline-block;*/
+    opacity: 0;
+}
+
+.social-media-onhover {
+    position: absolute;
+    left: 0;
+    top: 0;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: all ease 0.5s;
+}
+
+.social-media-onhover:hover {
+    opacity: 1;
+    transition: all ease .5s;
+}
+
+.social-media-onhover p {
+    text-align: center;
+    font-weight: bold;
+    letter-spacing: 1px;
+    color: #0586FF;
+    font-size: 18px;
+    position: relative;
+    margin: auto;
+    top: 60px;
+}
+
+/*about */
+
+#about {
+    /*opacity: .5;*/
+    min-height: 100vh;
+    width: 100%;
+    transition: all ease 1s;
+}
+
+.aboutMe,
+.skillsContainer,
+.portrolioContainer {
+    padding-bottom: 100px;
+    padding-top: 150px;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+.aboutMe p {
+    margin: 30px auto;
+    font-size: 20px;
+    font-family: 'Sarala', sans-serif;
+}
+
+/*Global Content styles*/
+h2 {
+    margin: 10px auto;
+    font-size: 50px;
+    text-transform: uppercase;
+    font-family: 'Sarala', sans-serif;
+}
+
+.underline,
+.topline {
+    background-color: black;
+    position: relative;
+    margin: auto;
+    width: 0;
+    height: 3px;
+}
+
+.background_animation {
+    transition: all linear 1s;
+    width: 50%;
+}
+
+/*Skills styles*/
+
+#skills {
+    background-image: url("../images/skillsBG.png");
+    background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    color: white;
+    -webkit-box-shadow: inset 0px -5px 20px 0px rgba(0, 0, 0, 0.75), inset 0px 5px 20px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: inset 0px -5px 20px 0px rgba(0, 0, 0, 0.75), inset 0px 5px 20px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: inset 0px -5px 20px 0px rgba(0, 0, 0, 0.75), inset 0px 5px 20px 0px rgba(0, 0, 0, 0.75);
+}
+
+
+.skillsContainer h2 {
+    width: 50%;
+    background-color: rgba(0, 0, 0, .3);
+    box-shadow: inset 0 0 5px 2px rgba(0, 0, 0, 0.8);
+}
+
+.skillImageContainer {
+    margin: 20px auto;
+}
+
+.skillImageContainer p {
+    padding: 5px;
+    color: white;
+    background-color: rgba(0, 0, 0, .5);
+    border-radius: 4px;
+    font-size: 16px;
+    font-weight: bolder;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+
+}
+
+
+
+.colorDiv .skillImageContainer img {
+    width: 150px;
+    border-radius: 2px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+    padding: 20px;
+}
+
+.colorDiv .skillImageContainer:nth-child(1) img {
+    background-color: rgba(178, 223, 219, 0.6);
+}
+
+.colorDiv .skillImageContainer:nth-child(2) img {
+    background-color: rgba(128, 203, 196, 0.6);
+}
+
+.colorDiv .skillImageContainer:nth-child(3) img {
+    background-color: rgba(77, 182, 172, 0.6);
+}
+
+.colorDiv .skillImageContainer:nth-child(4) img {
+    background-color: rgba(38, 166, 154, 0.6);
+}
+
+.colorDiv .skillImageContainer:nth-child(5) img {
+    background-color: rgba(0, 150, 136, 0.6);
+}
+
+.colorDiv .skillImageContainer:nth-child(6) img {
+    background-color: rgba(0, 137, 123, 0.6);
+}
+
+.colorDiv .skillImageContainer:nth-child(7) img {
+    background-color: rgba(0, 121, 107, 0.6);
+}
+
+.colorDiv .skillImageContainer:nth-child(8) img {
+    background-color: rgba(0, 105, 92, 0.6);
+}
+
+.colorDiv .skillImageContainer:nth-child(9) img {
+    background-color: rgba(0, 77, 64, 0.6);
+}
+
+/*  */
+.colorDiv .skillImageContainer:nth-child(1) img:hover {
+    background-color: rgba(178, 223, 219, 0.8);
+    transition: ease-in .2s;
+}
+
+.colorDiv .skillImageContainer:nth-child(2) img:hover {
+    background-color: rgba(128, 203, 196, 0.8);
+    transition: ease-in .2s;
+
+}
+
+.colorDiv .skillImageContainer:nth-child(3) img:hover {
+    background-color: rgba(77, 182, 172, 0.8);
+    transition: ease-in .2s;
+
+}
+
+.colorDiv .skillImageContainer:nth-child(4) img:hover {
+    background-color: rgba(38, 166, 154, 0.8);
+    transition: ease-in .2s;
+
+}
+
+.colorDiv .skillImageContainer:nth-child(5) img:hover {
+    background-color: rgba(0, 150, 136, 0.8);
+    transition: ease-in .2s;
+
+}
+
+.colorDiv .skillImageContainer:nth-child(6) img:hover {
+    background-color: rgba(0, 137, 123, 0.8);
+    transition: ease-in .2s;
+
+}
+
+.colorDiv .skillImageContainer:nth-child(7) img:hover {
+    background-color: rgba(0, 121, 107, 0.8);
+    transition: ease-in .2s;
+}
+
+.colorDiv .skillImageContainer:nth-child(8) img:hover {
+    background-color: rgba(0, 105, 92, 0.8);
+    transition: ease-in .2s;
+}
+
+.colorDiv .skillImageContainer:nth-child(9) img:hover {
+    background-color: rgba(0, 77, 64, 0.8);
+    transition: ease-in .2s;
+}
+
+
+/*Portfolio styles*/
+
+#portfolio {
+    min-height: 100vh;
+    background-color: white;
+}
+
+.portrolioContainer .arrow {
+    opacity: 0;
+    position: relative;
+    left: 50%;
+    -webkit-transform-origin: 50% 50%;
+    transform-origin: 50% 50%;
+    -webkit-transform: translate3d(-50%, -50%, 0);
+    transform: translate3d(-50%, -50%, 0);
+}
+
+.arrow-first {
+    -webkit-animation: arrow 2s ease-in-out infinite;
+    animation: arrow 2s ease-in-out infinite;
+}
+
+.arrow-second {
+    -webkit-animation: arrow 3s 1s ease-in-out infinite;
+    animation: arrow 2s 1s ease-in-out infinite;
+}
+
+.arrow:before,
+.arrow:after {
+    background: black;
+    content: ' ';
+    display: block;
+    height: 3px;
+    position: absolute;
+    top: -50px;
+    left: 49%;
+    width: 30px;
+}
+
+.arrow:before {
+    -webkit-transform: rotate(45deg) translateX(-23%);
+    transform: rotate(45deg) translateX(-23%);
+    -webkit-transform-origin: top left;
+    transform-origin: top left;
+}
+
+.arrow:after {
+    -webkit-transform: rotate(-45deg) translateX(23%);
+    transform: rotate(-45deg) translateX(23%);
+    -webkit-transform-origin: top right;
+    transform-origin: top right;
+}
+
+.project {
+    position: relative;
+    margin: 20px auto;
+    width: 40%;
+    display: inline-block;
+}
+
+.project img {
+    width: 100%;
+    padding: 0;
+}
+
+.overlay {
+    position: absolute;
+    left: 0px;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    opacity: 0;
+    transition: .5s ease;
+}
+
+.overlay:hover {
+    opacity: 1;
+    background: linear-gradient(-45deg, rgb(90, 74, 181), rgba(103, 115, 255, 1), rgba(82, 136, 232, 1), rgba(90, 194, 255, 1));
+    background-size: 400% 400%;
+    animation: overlayBG linear 3s infinite;
+}
+
+.overlay p {
+    position: relative;
+    top: 40%;
+    color: white;
+    font-family: 'Sarala', sans-serif;
+    font-size: 16px;
+    font-weight: bolder;
+}
+
+/*Contact styles*/
+
+#contact {
+    -webkit-box-shadow: inset 0px -5px 20px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: inset 0px -5px 20px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: inset 0px -5px 20px 0px rgba(0, 0, 0, 0.75);
+    background: url('../images/contact/background.jpg') center no-repeat;
+    background-size: cover;
+    -webkit-backdrop-filter: blur(4px);
+    min-height: 100vh;
+}
+
+.contactForm {
+    width: 100%;
+    height: 100%;
+}
+
+.form-div {
+    padding: 30px;
+}
+
+.contactInfo {}
+
+.contactInfo p {
+    text-align: left;
+    font-size: 16px;
+    letter-spacing: 1px;
+    font-weight: 700;
+}
+
+#contact .underline,
+.contactForm .underline {
+    width: 50%;
+    background-color: rgba(0, 0, 0, .7);
+    border-radius: 8px;
+    height: 3px;
+}
+
+.form-div input,
+.form-div textarea {
+    box-shadow: 0 0 2px 0px rgba(0, 0, 0, .1);
+    font-weight: bolder;
+    border: none;
+    background: #f6f6f6;
+}
+
+.btnSubmit {
+    text-transform: uppercase;
+    font-family: Helvetica, sans-serif, Arial;
+    position: relative;
+    margin: auto;
+    text-align: center;
+    padding: 20px;
+    font-size: 20px;
+    letter-spacing: 1px;
+    color: white;
+    background: linear-gradient(to right, blue, #00d3ff);
+    background-size: 200% 100%;
+    background-position: left;
+    width: 95%;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all ease 1s;
+}
+
+.btnSubmit:hover {
+    background-size: 200% 200%;
+    background-position: right;
+}
+
+/*footer*/
+footer {
+    background-color: black;
+    color: white;
+    z-index: 2000;
+    font-size: 20px;
+    text-transform: uppercase;
+    font-family: 'Sarala', sans-serif;
+}
+
+/*Animations*/
+@keyframes overlayBG {
+    0% {
+        background-position: 0 50%;
+    }
+
+    50% {
+        background-position: 100% 50%
+    }
+
+    100% {
+        background-position: 0% 50%
+    }
+}
+
+@keyframes arrow {
+    0% {
+        opacity: 0;
+        top: 0px;
+    }
+
+    50% {
+        opacity: 1
+    }
+
+    100% {
+        opacity: 0;
+        top: 20px;
+    }
+}
+
+@keyframes changeBackgroundColor {
+
+    0% {
+        background-color: black;
+    }
+
+    100% {
+        background-color: #EEC3A4;
+        width: 50%;
+    }
+}
+
+@-webkit-keyframes dotAnimation {
+    50% {
+        transform: scale(1.5);
+        background-color: yellow;
+    }
+
+    100% {
+        transform: scale(1);
+        background-color: transparent;
+    }
+}
+
+@-webkit-keyframes backgroundAnimation {
+    0% {
+        background-position: 0 0;
+    }
+
+    100% {
+        background-position: center;
+    }
+
+}
+
+@media (max-width: 768px) {
+    #mainNavbar {
+        background-color: rgba(0, 0, 0, .8);
+        transition: all ease-in-out .3s;
+    }
+
+    #skills {
+        background-size: 275% 100%;
+    }
+
+    .skillsContainer {
+        padding-right: 10px;
+        padding-left: 10px
+    }
+
+    .skillsContainer .underline {
+        background-color: white;
+    }
+
+    .skillsContainer h2 {
+        box-shadow: none !important;
+        width: 100% !important;
+        font-size: 24px;
+    }
+
+    .start-content-information h1 {
+        font-size: 30px;
+    }
+
+    .portrolioContainer {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .social-media {
+        margin: auto;
+    }
+
+    .social-media-onhover {
+        top: 60px;
+    }
+
+    .overlay p {
+        position: relative;
+        top: 10%;
+        color: white;
+        font-family: 'Sarala', sans-serif;
+        font-size: 8px;
+        font-weight: normal;
+        padding: 2px;
+    }
+
+    .aboutMe {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .colorDiv .skillImageContainer p {
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+    }
+}
+
+.form-control {
+    border: 1px solid #ced4da;
+    border-radius: 2px;
+    font-weight: 300 !important;
+}
+
+.form-control::placeholder {
+    font-weight: 300;
+}
+
+.form-control:focus,
+.form-control:active {
+    box-shadow: none;
+}
+
+.error {
+    color: red;
+}
+
+.success {
+    text-align: center;
+    font-weight: 400;
+    padding: 10px;
+    font-size: 20px;
+    letter-spacing: 1px;
+}
